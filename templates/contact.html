@@ -1,0 +1,22 @@
+{% extends "base.html"%}
+{% load staticfiles %}
+
+{%block content%}
+
+
+
+<div class="form-style-5">
+<form action="/contact/" method="POST" enctype="multipart/form-data" <!--onsubmit="myFunction()"--> >{% csrf_token %}
+
+
+{{ form }}
+
+<input type="submit" value="SAVE" />
+
+</form>
+  
+</div>
+         
+
+      
+{%endblock%}

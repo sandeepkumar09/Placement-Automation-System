@@ -1,0 +1,16 @@
+{% extends "cbase.html"%}
+{% load staticfiles %}
+
+{%block content%}
+{{fullname}}
+<div class="form-style-5">
+{% with 'media/credentials/dist/logo/'|add:logo as image_static %}
+<img src="{% static image_static %}"  height="600" width="500" alt="userpic"/>
+
+{% endwith %}
+</div>
+
+{% if photo.upload %}
+
+{%endif%}      
+{%endblock%}

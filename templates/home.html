@@ -1,0 +1,117 @@
+{% extends "cbase.html"%}
+{%load staticfiles%}
+
+{%block content%}
+
+    <style>
+        .photo {
+
+            background: #1d3454;
+            margin-top: 10px;
+            margin-right :50px;
+            float:right;
+        }
+        .photo img{
+
+            padding:5px;
+
+        }
+        .title h1{
+            text-align: center;
+            color: #75050c;
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .details h2{
+            color: #001f3f;
+            font-weight: bold;
+        }
+        .details {
+            margin-left: 40px;
+        }
+        .details p{
+            font-size:16px;
+        }
+        .details h3{
+            color: #001f3f;
+        }
+    </style>
+
+         {% with 'media/credentials/dist/logo/'|add:logo as image_static %}{% csrf_token %}
+        <div class = "photo" >
+            <div class="border">
+            <img src="{% static image_static %}"   height="400" width="300" alt="userpic"/>
+            </div>
+        </div>
+        {% endwith %}
+
+        <div class ="title">
+            <h1>{{name}}</h1>
+        </div>
+
+        <h2>DESCRIPTION : </h2>
+        <P>
+            {{ description }}
+        </P>
+        <div class ="details" >
+            <h2>JOB DETAILS</h2>
+
+
+            <P>
+                Position : {{ Position }}<br>
+                Description : {{ desc }}<br>
+                CPI Cut-off (if any ) :  {{ CPI_cut_off }}<br>
+                Branches : {{ Branches }}<br>
+
+            </P>
+
+            </P>
+            <h2>CONTACT DETAILS</h2>
+
+            <p>
+                COMPANY NAME : {{ name }} <br>
+                EMAIL : {{email}}<br>
+                URL : {{ url }} <br>
+
+            </p>
+
+            <h3>HEAD OFFICE</h3>
+            <p>
+                Plot Number : {{ plot_number }}<br>
+                Area : {{ Area }} <br>
+                City : {{ City }} <br>
+                Pincode : {{ Pincode }} <br>
+                Country : {{ Country }} <br>
+                Phone : {{ Phone }} <br>
+                email : {{ email }}<br>
+
+            </p>
+
+            <h3>WORK OFFICE</h3>
+            <p>
+                Plot Number : {{ plot_numberw }}<br>
+                Area : {{ Areaw }} <br>
+                City : {{ Cityw }} <br>
+                Pincode : {{ Pincodew }} <br>
+                Country : {{ Countryw }} <br>
+                Phone : {{ Phonew }} <br>
+                email : {{ emailw }}<br>
+
+            </p>
+
+            <h3>SALES OFFICE</h3>
+            <p>
+                Plot Number : {{ plot_numbers }}<br>
+                Area : {{ Areas }} <br>
+                City : {{ Citys }} <br>
+                Pincode : {{ Pincodes }} <br>
+                Country : {{ Countrys }} <br>
+                Phone : {{ Phones }} <br>
+                email : {{ emails }}<br>
+
+            </p>
+
+        <h2>
+
+
+{% endblock %}

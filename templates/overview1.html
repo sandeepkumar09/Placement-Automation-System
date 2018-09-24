@@ -1,0 +1,30 @@
+{% extends "cbase.html" %}
+
+{% load staticfiles %}
+
+{%block content%}
+
+    <style>
+        p{
+            font-size : 16px;
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+
+        h3{
+            color: #002151;
+        }
+
+    </style>
+    <h3>DESCRIPTION :</h3>
+<p>
+     {{ dd }}<br><br><br>
+</p>
+
+    <h3>URL :<h3>
+    <p>
+    {{ u }}<br>
+
+   </p>
+
+{% endblock %}

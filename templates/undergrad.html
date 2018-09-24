@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{%load staticfiles%}
+
+{%block content%}
+
+          <div class="form-style-5">
+<form action="/undergrad/" method="post">{%csrf_token%}
+{{form2}}
+
+<input type="submit" value="SAVE" />
+</form>
+</div>
+
+{%endblock%}

@@ -1,0 +1,24 @@
+{% extends "base.html"%}
+{% load staticfiles %}
+
+{%block content%}
+
+    <style>
+        p{
+            font-size : 16px;
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+
+    </style>
+
+<p>Email : {{email}}</p><br>
+<p>Mobile : {{mobile}}</p><br>
+<p>Temporary Address : {{temp}}</p><br>
+<p>Permanent Address : {{perm}}</p><br>
+<p>Website : {{website}}</p><br>
+{% if obj %}
+    <p>CV : <a href="{{ obj.upload_cv.url }}">{{ obj.upload_cv.name }}</a></p>
+
+{%endif%}      
+{%endblock%}

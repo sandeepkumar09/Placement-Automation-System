@@ -1,0 +1,51 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset ="UTF-8">
+		<title>Search Engine</title>
+		
+		<link rel="stylesheet" href="{% static 'credentials/front.css' %}">
+		
+		<link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+		<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+
+	</head>
+	
+	<body>
+		<div class="title">
+			<h1> Boomer Search </h1>
+		</div>
+		
+		<div class="container">
+			<div class="box1">
+				<h2> Search Student Username </h2>
+				<form method="post" action="/studentsearch/">{%csrf_token%}
+					<div class="inputbox">
+					<input type="text" id="studentsearch" name="studentsearch" >
+					</div>
+				
+					<div class="button">
+						<button><span>Search</span></button>
+					</div>
+				</form>
+			</div>
+			<div class="box2">
+				<h2> Search Company Username </h2>
+				<form method="post" action="/companysearch/">{%csrf_token%}
+					<div class="inputbox">
+						<input type="text" id="companysearch" name="companysearch" >
+					</div>
+				
+					<div class="button">
+						<button><span>Search</span></button>
+					</div>
+				</form>
+			</div>
+		
+		
+		</div>
+		
+	</body>
+	
+</html>

@@ -1,0 +1,79 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+
+
+
+
+
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="{% static 'credentials/main.css' %}"/>
+
+
+
+</head>
+<body>
+<div class="container">
+    <div class="login-signup">
+      <div class="row">
+        <div class="col-sm-6 nav-tab-holder">
+        <ul class="nav nav-tabs row" role="tablist">
+        </ul>
+      </div>
+
+      </div>
+
+
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+          <div class="row">
+
+            <div class="col-sm-6 mobile-pull">
+              <article role="login">
+                <h3 class="text-center"><i class="fa fa-lock"></i>USER</h3>
+                <form class="signup" action="/register/" method="post">{% csrf_token %}
+                {{form}}
+                    <input type="submit" class="btn btn-success btn-block"  value="SUBMIT">
+                  </div>
+                </form>
+
+                <footer role="signup" class="text-center">
+                  
+                </footer>
+
+              </article>
+            </div>
+
+        
+              
+          </div>
+
+
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  </body>
+  </html>

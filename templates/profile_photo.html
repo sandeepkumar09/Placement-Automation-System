@@ -1,0 +1,30 @@
+{% extends "base.html"%}
+{% load staticfiles %}
+
+{%block content%}
+
+    <style>
+        .newt {
+            margin:60px;
+
+        }
+        h1{
+            text-align: center;
+            color: #75050c;
+            font-size: 50px;
+            font-weight: bold;
+
+        }
+    </style>
+    <h1>{{fullname}}</h1>
+<div class="form-style-5">
+{% with 'media/credentials/dist/img/'|add:picname as image_static %}
+<img src="{% static image_static %}" class="newt" height="600" width="500" alt="userpic"/>
+
+{% endwith %}
+</div>
+
+{% if photo.upload %}
+
+{%endif%}      
+{%endblock%}

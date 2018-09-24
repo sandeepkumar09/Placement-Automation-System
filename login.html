@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html >
+     <head>
+			<meta charset="UTF-8">
+			<title>placement login</title>
+			
+			<link rel="stylesheet" href="css/style2.css">
+			
+			<!--jQuery library used here-->
+			<script src="jquery/jquery.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+			
+		</head>
+
+		<body>
+
+    
+<!--Title-->
+			<div class="title">
+				<h1>Placement Portal Login</h1>
+			</div>
+
+			<div class="box">
+ 
+				<div class="card">
+				
+					<ul class="tab-object">
+						<li class="active"><a href="#student">Student</a></li>
+						<li><a href="#company">Company</a></li>
+					</ul>
+				
+					<div class="in-tab">
+						<div id="student" class="tab active">
+							<h1 class="title">Student Login</h1>
+							<form>
+								<div class="input-box">
+								
+									<input type="text" id="stuser" required="required"/>
+									<label for="stuser">Student's Username</label>
+									<div class="bar"></div>
+								</div>
+								<div class="input-box">
+									<input type="password" id="stuPass" required="required"/>
+									<label for="stuPass">Password</label>
+									<div class="bar"></div>
+								</div>
+								<div class="button-box">
+									<button><span>Go</span></button>
+								</div>
+								<div class="base">
+									<a href="#" class="forgot">Forgot your password?</a>
+									<a href="#" class="signup">Sign Up</a>
+						
+								</div>
+							</form>
+						</div>
+						
+						<div id="company" class="tab">
+							<h1 class="title">Company Login</h1>
+							<form>
+								<div class="input-box">
+								
+									<input type="text" id="comUser" required="required"/>
+									<label for="comUser">Company's Username</label>
+									<div class="bar"></div>
+								</div>
+								<div class="input-box">
+									<input type="password" id="comPass" required="required"/>
+									<label for="comPass">Password</label>
+									<div class="bar"></div>
+								</div>
+								<div class="button-box">
+									<button><span>Go</span></button>
+								</div>
+								<div class="base">
+									<a href="#" class="forgot">Forgot your password?</a>
+									<a href="#register" class="signup">Sign Up</a>
+						
+								</div>
+							</form>
+						</div>	
+						
+					</div>
+ 
+				</div>
+				
+			
+		<script>
+		jQuery(document).ready(function() {
+			jQuery('.card .tab-object a').on('click', function(e)  {
+			var currentTab = jQuery(this).attr('href');
+ 
+        // Show/Hide Tabs
+			jQuery('.card ' + currentTab).slideDown(500).siblings().slideUp(500);
+ 
+        // Change current tab to active
+			jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+			e.preventDefault();
+    });
+});
+</script>
+  
+    
+		</body>
+</html>
